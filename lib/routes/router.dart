@@ -4,6 +4,7 @@ import 'package:navigation/pages/home_page.dart';
 import 'package:navigation/pages/home_screen.dart';
 import 'package:navigation/pages/login_page.dart';
 import 'package:navigation/pages/nested_page.dart';
+import 'package:navigation/pages/podcast_page.dart';
 import 'package:navigation/pages/root_page.dart';
 import 'package:navigation/pages/under_page.dart';
 import 'package:navigation/pages/favorite_page.dart';
@@ -12,10 +13,11 @@ import 'package:navigation/pages/favorite_page.dart';
   replaceInRouteName: 'Page,Route,Screen',
   routes: <AutoRoute>[
     AutoRoute(name: "LoginPage", page: LoginPage, initial: true),
-    AutoRoute(
-        name: "RootPage",
-        page: RootPage,
-        children: [favoritePageRoute, homePageRoute]),
+    AutoRoute(name: "RootPage", page: RootPage, children: [
+      favoritePageRoute,
+      homePageRoute,
+      AutoRoute(path: 'podcastPage/*', name: "PodcastPage", page: PodcastPage),
+    ]),
   ],
 )
 class $AppRouter {}

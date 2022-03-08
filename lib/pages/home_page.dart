@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:navigation/pages/counter_page.dart';
 import 'package:navigation/pages/food_page.dart';
+import 'package:navigation/pages/hotel_page.dart';
 
 class HomePage extends StatefulWidget {
-
-
   const HomePage({ Key? key }): super(key: key);
 
   @override
@@ -18,7 +17,7 @@ class HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    _controller = TabController(length: 2, vsync: this);
+    _controller = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -39,13 +38,15 @@ class HomePageState extends State<HomePage>
         title: const Text("Traveler"),
         bottom: TabBar(controller: _controller, tabs: const <Tab>[
           Tab(text: "COUNTER"),
+          Tab(text: "HOTEL"),
           Tab(text: "FOOD"),
         ]),
       ),
       body: TabBarView(
         controller: _controller,
-        children: <Widget>[
+        children: const <Widget>[
           CounterPage(),
+          HotelPage(),
           FoodPage(),
         ],
       ),
