@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NestedPage extends StatefulWidget {
-  NestedPage({Key? key}) : super(key: key);
+  const NestedPage({Key? key}) : super(key: key);
 
   @override
   State<NestedPage> createState() => _NestedPageState();
