@@ -12,8 +12,8 @@
 
 import 'package:auto_route/auto_route.dart' as _i8;
 import 'package:flutter/material.dart' as _i9;
-import 'package:navigation/pages/favorite_page.dart' as _i3;
-import 'package:navigation/pages/favorite_screen.dart' as _i5;
+import 'package:navigation/pages/favorite_page.dart' as _i5;
+import 'package:navigation/pages/favorite_screen.dart' as _i3;
 import 'package:navigation/pages/home_page.dart' as _i4;
 import 'package:navigation/pages/login_page.dart' as _i1;
 import 'package:navigation/pages/nested_page.dart' as _i7;
@@ -36,17 +36,17 @@ class AppRouter extends _i8.RootStackRouter {
       return _i8.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i2.RootPage());
     },
-    FavoritePage.name: (routeData) {
+    FavoriteScreen.name: (routeData) {
       return _i8.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i3.FavoritePage());
+          routeData: routeData, child: const _i3.FavoriteScreen());
     },
     HomePage.name: (routeData) {
       return _i8.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i4.HomePage());
     },
-    FavoriteScreenRoute.name: (routeData) {
+    FavoritePageRoute.name: (routeData) {
       return _i8.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i5.FavoriteScreen());
+          routeData: routeData, child: const _i5.FavoritePage());
     },
     UnderPage.name: (routeData) {
       return _i8.AdaptivePage<dynamic>(
@@ -64,14 +64,14 @@ class AppRouter extends _i8.RootStackRouter {
   List<_i8.RouteConfig> get routes => [
         _i8.RouteConfig(LoginPage.name, path: '/'),
         _i8.RouteConfig(RootPage.name, path: '/root-page', children: [
-          _i8.RouteConfig(FavoritePage.name,
+          _i8.RouteConfig(FavoriteScreen.name,
               path: 'favorite',
               parent: RootPage.name,
               children: [
-                _i8.RouteConfig(FavoriteScreenRoute.name,
-                    path: '', parent: FavoritePage.name),
+                _i8.RouteConfig(FavoritePageRoute.name,
+                    path: '', parent: FavoriteScreen.name),
                 _i8.RouteConfig(UnderPage.name,
-                    path: 'underPage/*', parent: FavoritePage.name)
+                    path: 'underPage/*', parent: FavoriteScreen.name)
               ]),
           _i8.RouteConfig(HomePage.name,
               path: 'home-page',
@@ -114,12 +114,12 @@ class RootPage extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i3.FavoritePage]
-class FavoritePage extends _i8.PageRouteInfo<void> {
-  const FavoritePage({List<_i8.PageRouteInfo>? children})
-      : super(FavoritePage.name, path: 'favorite', initialChildren: children);
+/// [_i3.FavoriteScreen]
+class FavoriteScreen extends _i8.PageRouteInfo<void> {
+  const FavoriteScreen({List<_i8.PageRouteInfo>? children})
+      : super(FavoriteScreen.name, path: 'favorite', initialChildren: children);
 
-  static const String name = 'FavoritePage';
+  static const String name = 'FavoriteScreen';
 }
 
 /// generated route for
@@ -132,11 +132,11 @@ class HomePage extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i5.FavoriteScreen]
-class FavoriteScreenRoute extends _i8.PageRouteInfo<void> {
-  const FavoriteScreenRoute() : super(FavoriteScreenRoute.name, path: '');
+/// [_i5.FavoritePage]
+class FavoritePageRoute extends _i8.PageRouteInfo<void> {
+  const FavoritePageRoute() : super(FavoritePageRoute.name, path: '');
 
-  static const String name = 'FavoriteScreenRoute';
+  static const String name = 'FavoritePageRoute';
 }
 
 /// generated route for

@@ -28,7 +28,7 @@ class _RootPageState extends State<RootPage> {
     return AutoTabsScaffold(
       routes: const [
         HomePage(),
-        FavoritePage()
+        FavoriteScreen()
       ],
       bottomNavigationBuilder: (_, tabsRouter) {
         return BottomNavigationBar(

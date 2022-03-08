@@ -21,10 +21,10 @@ class $AppRouter {}
 
 const favoritePageRoute = AutoRoute(
   path: 'favorite',
-  name: "FavoritePage",
-  page: FavoritePage,
+  name: "FavoriteScreen",
+  page: FavoriteScreen,
   children: [
-    AutoRoute(path: '', page: FavoriteScreen),
+    AutoRoute(path: '', page: FavoritePage),
     AutoRoute(path: 'underPage/*', name: "UnderPage", page: UnderPage),
   ],
 );
