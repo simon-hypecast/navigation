@@ -27,7 +27,7 @@ class _RootPageState extends State<RootPage> {
   Widget build(context) {
     return AutoTabsScaffold(
       routes: const [
-        HomePage(),
+        HomeScreen(),
         FavoriteScreen()
       ],
       bottomNavigationBuilder: (_, tabsRouter) {
