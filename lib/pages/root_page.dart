@@ -1,7 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:navigation/pages/favorite_page.dart';
-import 'package:navigation/pages/home_page.dart';
 import 'package:navigation/routes/router.gr.dart';
 
 
@@ -13,17 +11,15 @@ class RootPage extends StatefulWidget {
 }
 
 class _RootPageState extends State<RootPage> {
-  late int _index;
 
   @override
   void initState() {
-    print("initState in rootPage");
+    print("initState in RootPage");
     super.initState();
-    _index = 0;
   }
   @override
   void dispose() {
-    print("dispose rootPage");
+    print("dispose RootPage");
     super.dispose();
   }
 
@@ -31,8 +27,8 @@ class _RootPageState extends State<RootPage> {
   Widget build(context) {
     return AutoTabsScaffold(
       routes: const [
-        HomePageRouter(),
-        FavoritePageRouter()
+        HomePage(),
+        FavoritePage()
       ],
       bottomNavigationBuilder: (_, tabsRouter) {
         return BottomNavigationBar(

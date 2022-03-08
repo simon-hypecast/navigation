@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:navigation/pages/login_page.dart';
-import 'package:navigation/pages/under_page.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:navigation/routes/router.gr.dart';
 
 class FavoritePage extends StatefulWidget {
   const FavoritePage({Key? key}) : super(key: key);
@@ -27,16 +27,12 @@ class _FavoritePageState extends State<FavoritePage> {
               child: Text('FavoritePage'),
             ),
             ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => UnderPage()));
-              },
-              child: Text("Under Page"),
+              onPressed: () => context.router.navigate(const UnderPage()),
+              child: const Text("Under Page"),
             ),
             ElevatedButton(
-              onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
-              },
-              child: Text("Logout"),
+              onPressed: () => context.router.replace(LoginPage()),
+              child: const Text("Logout"),
             )
           ],
         )

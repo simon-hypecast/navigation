@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:navigation/pages/root_page.dart';
 import 'package:navigation/routes/router.gr.dart';
 
 class LoginPage extends StatefulWidget{
@@ -21,7 +20,7 @@ class _LoginPageState extends State<LoginPage>   {
               child: Text('LoginPage'),
             ),
             ElevatedButton(
-              onPressed: () => context.router.replace(const RootPageRoute()),
+              onPressed: () => context.router.replace(const RootPage()),
               child: Text("Login"),
             )
           ],
