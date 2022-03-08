@@ -11,8 +11,8 @@ class _UnderPageState extends State<UnderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("UnderPage")),
-      body: Center(child: Text("Under Page")),
+      appBar: AppBar(title: const Text("UnderPage")),
+      body: const Center(child: Text("Under Page")),
     );
   }
 }

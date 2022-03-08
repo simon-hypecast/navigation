@@ -1,10 +1,11 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:navigation/pages/favorite_page.dart';
+import 'package:navigation/pages/favorite_screen.dart';
 import 'package:navigation/pages/home_page.dart';
 import 'package:navigation/pages/login_page.dart';
 import 'package:navigation/pages/nested_page.dart';
 import 'package:navigation/pages/root_page.dart';
 import 'package:navigation/pages/under_page.dart';
+import 'package:navigation/pages/favorite_page.dart';
 
 @AdaptiveAutoRouter(
   replaceInRouteName: 'Page,Route,Screen',
@@ -19,13 +20,12 @@ import 'package:navigation/pages/under_page.dart';
 class $AppRouter {}
 
 const favoritePageRoute = AutoRoute(
+  path: 'favorite',
   name: "FavoritePage",
   page: FavoritePage,
   children: [
-    AutoRoute(
-      name: 'UnderPage',
-      page: UnderPage,
-    ),
+    AutoRoute(path: '', page: FavoriteScreen),
+    AutoRoute(path: 'underPage/*', name: "UnderPage", page: UnderPage),
   ],
 );
 

@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:navigation/routes/router.gr.dart';
 
-class FavoritePage extends StatefulWidget {
-  const FavoritePage({Key? key}) : super(key: key);
+class FavoriteScreen extends StatefulWidget {
+  const FavoriteScreen({Key? key}) : super(key: key);
 
   @override
-  State<FavoritePage> createState() => _FavoritePageState();
+  State<FavoriteScreen> createState() => _FavoriteScreenState();
 }
 
-class _FavoritePageState extends State<FavoritePage> {
+class _FavoriteScreenState extends State<FavoriteScreen> {
   @override
   void dispose() {
     print("dispose FavoritePage");
@@ -35,7 +35,7 @@ class _FavoritePageState extends State<FavoritePage> {
               child: const Text("Logout"),
             )
           ],
-        )
+        ),
     );
   }
 }
