@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage>   {
             ),
             ElevatedButton(
               onPressed: () => context.router.replace(const RootPage()),
-              child: Text("Login"),
+              child: const Text("Login"),
             )
           ],
         )

@@ -11,6 +11,13 @@ class HotelPage extends StatefulWidget {
 
 class _HotelPageState extends State<HotelPage> with AutomaticKeepAliveClientMixin{
   late bool _toggleDetails;
+
+  void resetToggleDetails (){
+    setState(() {
+      _toggleDetails = false;
+    });
+  }
+
   @override
   void initState() {
     print("initState HotelPage");
@@ -30,7 +37,7 @@ class _HotelPageState extends State<HotelPage> with AutomaticKeepAliveClientMixi
   @override
   Widget build(BuildContext context) {
     print("building HotelPage");
-    return _toggleDetails ? DetailsPage() : Column(
+    return _toggleDetails ? DetailsPage(callback: resetToggleDetails) : Column(
       children: [
         const Center(
           child: Text('HotelPage'),

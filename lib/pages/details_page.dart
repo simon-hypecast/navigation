@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 class DetailsPage extends StatefulWidget {
-  const DetailsPage({Key? key}) : super(key: key);
+  final Function callback;
+  const DetailsPage({Key? key, required this.callback}) : super(key: key);
 
   @override
   State<DetailsPage> createState() => _DetailsPageState();
@@ -10,6 +12,18 @@ class DetailsPage extends StatefulWidget {
 class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("DetailsPage"));
+    return Scaffold(
+      appBar: AppBar(
+          leading: GestureDetector(
+            onTap: () {
+              widget.callback();
+            },
+            child: const Text("Zurück"),
+          ),
+          title: const Text("DetailsPage")),
+      body: const Center(
+        child: Text("DetailsPage"),
+      ),
+    );
   }
 }
