@@ -12,8 +12,8 @@
 
 import 'package:auto_route/auto_route.dart' as _i8;
 import 'package:flutter/material.dart' as _i9;
-import 'package:navigation/pages/favorite_page.dart' as _i5;
-import 'package:navigation/pages/favorite_screen.dart' as _i3;
+import 'package:navigation/pages/favorite_page.dart' as _i3;
+import 'package:navigation/pages/favorite_screen.dart' as _i5;
 import 'package:navigation/pages/home_page.dart' as _i4;
 import 'package:navigation/pages/login_page.dart' as _i1;
 import 'package:navigation/pages/nested_page.dart' as _i7;
