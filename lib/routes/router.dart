@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:navigation/pages/audio_player.dart';
 import 'package:navigation/pages/favorite_screen.dart';
 import 'package:navigation/pages/home_page.dart';
 import 'package:navigation/pages/home_screen.dart';
@@ -13,6 +14,8 @@ import 'package:navigation/pages/favorite_page.dart';
   replaceInRouteName: 'Page,Route,Screen',
   routes: <AutoRoute>[
     AutoRoute(name: "LoginPage", page: LoginPage, initial: true),
+    CustomRoute(name: "AudioPlayer", page: AudioPlayer, transitionsBuilder: TransitionsBuilders.slideBottom,
+        durationInMilliseconds: 400),
     AutoRoute(name: "RootPage", page: RootPage, children: [
       favoritePageRoute,
       homePageRoute,
