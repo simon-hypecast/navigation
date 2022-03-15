@@ -36,6 +36,7 @@ class _HotelPageState extends State<HotelPage> with AutomaticKeepAliveClientMixi
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     print("building HotelPage");
     return _toggleDetails ? DetailsPage(callback: resetToggleDetails) : Column(
       children: [

@@ -21,6 +21,7 @@ class _CounterPageState extends State<CounterPage> with AutomaticKeepAliveClient
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Column(
       children: [
         Text("Button clicked: " + number.toString()),

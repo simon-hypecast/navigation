@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 
 class FavoritePage extends StatefulWidget {
@@ -26,15 +27,11 @@ class _FavoritePageState extends State<FavoritePage> {
               child: Text('FavoritePage'),
             ),
             ElevatedButton(
-              onPressed: () {
-
-              },
+              onPressed: ()  => context.go('/rootPage/underPage'),
               child: const Text("Under Page"),
             ),
             ElevatedButton(
-              onPressed: () {
-
-              },
+              onPressed: ()  => context.go('/'),
               child: const Text("Logout"),
             )
           ],

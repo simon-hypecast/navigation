@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage>   {
               child: Text('LoginPage'),
             ),
             ElevatedButton(
-              onPressed: ()  => GoRouter.of(context).go('/root'),
+              onPressed: ()  => context.go('/rootPage'),
               child: const Text("Login"),
             )
           ],
