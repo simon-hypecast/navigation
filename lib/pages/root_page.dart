@@ -1,6 +1,5 @@
-import 'package:auto_route/auto_route.dart';
+
 import 'package:flutter/material.dart';
-import 'package:navigation/routes/router.gr.dart';
 
 
 class RootPage extends StatefulWidget {
@@ -25,27 +24,28 @@ class _RootPageState extends State<RootPage> {
 
   @override
   Widget build(context) {
-    return AutoTabsScaffold(
-      routes: const [
-        HomeScreen(),
-        FavoriteScreen()
-      ],
-      bottomNavigationBuilder: (_, tabsRouter) {
-        return BottomNavigationBar(
-          currentIndex: tabsRouter.activeIndex,
-          onTap: tabsRouter.setActiveIndex,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.favorite),
-              label: 'Favorites',
-            ),
-          ],
-        );
-      },
-    );
+    return Container();
+    // return AutoTabsScaffold(
+    //   routes: const [
+    //     HomeScreen(),
+    //     FavoriteScreen()
+    //   ],
+    //   bottomNavigationBuilder: (_, tabsRouter) {
+    //     return BottomNavigationBar(
+    //       currentIndex: tabsRouter.activeIndex,
+    //       onTap: tabsRouter.setActiveIndex,
+    //       items: const [
+    //         BottomNavigationBarItem(
+    //           icon: Icon(Icons.home),
+    //           label: 'Home',
+    //         ),
+    //         BottomNavigationBarItem(
+    //           icon: Icon(Icons.favorite),
+    //           label: 'Favorites',
+    //         ),
+    //       ],
+    //     );
+    //   },
+    // );
   }
 }

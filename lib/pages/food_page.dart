@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
-import 'package:navigation/routes/router.gr.dart';
+
 
 class FoodPage extends StatefulWidget {
   const FoodPage({Key? key}) : super(key: key);
@@ -25,7 +24,9 @@ class _FoodPageState extends State<FoodPage> {
           child: Text('FoodPage'),
         ),
         ElevatedButton(
-          onPressed: () => context.router.navigate(const NestedPage()),
+          onPressed: () {
+
+          },
           child: const Text("go to Nested Page"),
         )
       ],

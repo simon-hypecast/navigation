@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
-import 'package:navigation/routes/router.gr.dart';
+
 
 class NestedPage extends StatefulWidget {
   const NestedPage({Key? key}) : super(key: key);
@@ -27,7 +26,9 @@ class _NestedPageState extends State<NestedPage> {
             child: Text('NestedPage'),
           ),
           ElevatedButton(
-            onPressed: () => context.router.navigate(const AudioPlayer()),
+            onPressed: () {
+
+            },
             child: Text("open AudioPlayer"),
           )
         ],
