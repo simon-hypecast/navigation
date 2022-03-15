@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:navigation/pages/favorite_page.dart';
 import 'package:navigation/pages/home_page.dart';
 import 'package:navigation/pages/login_page.dart';
+import 'package:navigation/pages/root_page.dart';
 
 
 void main() {
@@ -25,11 +26,15 @@ class MyApp extends StatelessWidget {
         builder: (context, state) => const LoginPage(),
       ),
       GoRoute(
-        path: '/home',
+        path: '/root',
+        builder: (context, state) => const RootPage(),
+      ),
+      GoRoute(
+        path: '/root/home',
         builder: (context, state) => const HomePage(),
       ),
       GoRoute(
-        path: '/favorite',
+        path: '/root/favorite',
         builder: (context, state) => const FavoritePage(),
       ),
     ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 
 class LoginPage extends StatefulWidget{
@@ -19,9 +20,7 @@ class _LoginPageState extends State<LoginPage>   {
               child: Text('LoginPage'),
             ),
             ElevatedButton(
-              onPressed: () {
-
-              },
+              onPressed: ()  => GoRouter.of(context).go('/root'),
               child: const Text("Login"),
             )
           ],
