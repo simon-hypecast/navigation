@@ -13,7 +13,6 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin {
   late TabController _controller;
-
   @override
   void initState() {
     super.initState();
@@ -27,12 +26,17 @@ class HomePageState extends State<HomePage>
   }
 
   @override
+  void didUpdateWidget(HomePage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
   bool get wantKeepAlive => true;
 
   @override
   Widget build(BuildContext context) {
     print("building HomePage");
-
+    super.build(context); //Nach AutomaticKeepAliveClientMixin
     return Scaffold(
       appBar: AppBar(
         title: const Text("Traveler"),

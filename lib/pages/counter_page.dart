@@ -13,9 +13,17 @@ class _CounterPageState extends State<CounterPage> with AutomaticKeepAliveClient
   @override
   void initState() {
     super.initState();
+    print("init counter");
     number = 0;
   }
 
+
+    @override
+  void dispose() {
+    // TODO: implement dispose
+    print("dispose counter");
+    super.dispose();
+  }
   @override
   bool get wantKeepAlive => true;
 

@@ -9,7 +9,10 @@ class FavoritePage extends StatefulWidget {
   State<FavoritePage> createState() => _FavoritePageState();
 }
 
-class _FavoritePageState extends State<FavoritePage> {
+class _FavoritePageState extends State<FavoritePage>
+  with AutomaticKeepAliveClientMixin {
+
+
   @override
   void dispose() {
     print("dispose FavoritePage");
@@ -17,8 +20,13 @@ class _FavoritePageState extends State<FavoritePage> {
   }
 
   @override
+  bool get wantKeepAlive => true;
+
+
+  @override
   Widget build(BuildContext context) {
     print("building FavoritePage");
+    super.build(context);
     return Scaffold(
         appBar: AppBar(title: const Text("FavoritePage")),
         body: Column(

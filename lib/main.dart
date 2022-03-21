@@ -9,6 +9,7 @@ import 'package:navigation/pages/under_page.dart';
 //New Packages
 import 'package:adaptive_navigation/adaptive_navigation.dart';
 
+//TODO widget.update anschauen
 
 void main() {
   runApp(MyApp());
@@ -27,11 +28,14 @@ class MyApp extends StatelessWidget {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const LoginPage(),
+        builder: (context, state) => const LoginPage(), 
       ),
       GoRoute(
         path: '/homePage',
-        builder: (context, state) => const HomePage(),
+        builder: (context, state) {
+          print("calling goRoute Home");
+          return HomePage(key: state.pageKey);
+        },
       ),
       GoRoute(
         path: '/favoritePage',
@@ -42,7 +46,7 @@ class MyApp extends StatelessWidget {
     navigatorBuilder: (context, state, child) => Navigator(
       onPopPage: ((route,dynamic result) {
         route.didPop(result);
-        return false;
+        return result;
       }),
       pages: [
         MaterialPage<void>(
@@ -79,17 +83,17 @@ class _SharedScaffoldState extends State<SharedScaffold> {
           AdaptiveScaffoldDestination(title: 'Favorites', icon: Icons.last_page),
         ],
         navigationTypeResolver: (context) =>
-            _drawerSize ? NavigationType.drawer : NavigationType.bottom,
+            _drawerSize ? NavigationType.drawer : NavigationType.bottom, // Wird benötigt zum wechseln zw. drawer und navbar
         onDestinationSelected: (index) async {
           // if there's a drawer, close it
           if (_drawerSize) Navigator.pop(context);
 
           switch (index) {
             case 0:
-              context.go('/homePage');
+              context.push('/homePage');
               break;
             case 1:
-              context.go('/favoritePage');
+              context.push('/favoritePage');
               break;
             // case 2:
             //   final packageInfo = await PackageInfo.fromPlatform();
