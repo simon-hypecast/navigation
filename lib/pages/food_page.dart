@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 
 class FoodPage extends StatefulWidget {
@@ -24,9 +25,7 @@ class _FoodPageState extends State<FoodPage> {
           child: Text('FoodPage'),
         ),
         ElevatedButton(
-          onPressed: () {
-
-          },
+          onPressed: ()  => context.push('/rootPage/homePage/nestedPage'),
           child: const Text("go to Nested Page"),
         )
       ],

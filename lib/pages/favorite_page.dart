@@ -27,8 +27,8 @@ class _FavoritePageState extends State<FavoritePage> {
               child: Text('FavoritePage'),
             ),
             ElevatedButton(
-              onPressed: ()  => context.go('/rootPage/underPage'),
-              child: const Text("Under Page"),
+              onPressed: ()  => context.push('/rootPage/favoritePage/settingsPage'),
+              child: const Text("Settings Page"),
             ),
             ElevatedButton(
               onPressed: ()  => context.go('/'),

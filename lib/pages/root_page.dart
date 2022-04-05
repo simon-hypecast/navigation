@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:navigation/pages/favorite_page.dart';
 import 'package:navigation/pages/home_page.dart';

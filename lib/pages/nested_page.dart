@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 
 class NestedPage extends StatefulWidget {
@@ -26,9 +27,7 @@ class _NestedPageState extends State<NestedPage> {
             child: Text('NestedPage'),
           ),
           ElevatedButton(
-            onPressed: () {
-
-            },
+            onPressed: ()  => context.push('/audioPlayer'),
             child: Text("open AudioPlayer"),
           )
         ],
